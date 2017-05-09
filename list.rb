@@ -11,11 +11,11 @@ class List
   end
 
   def complete_task(index)
-    tasks[index].complete!
+    tasks[index].complete! if tasks[index]
   end
 
   def delete_task(index)
-    tasks.delete_at(index)
+    tasks.delete_at(index) if tasks[index]
   end
 
   def completed_tasks
